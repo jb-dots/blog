@@ -18,7 +18,7 @@ $posts = $stmt->fetchAll();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Faceblog Homepage</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -45,13 +45,13 @@ $posts = $stmt->fetchAll();
             font-size: 0.9rem;
         }
         .btn-primary {
-            background-color: #007bff;
+            background-color: #a3d9a5;
             border: none;
             padding: 8px 16px;
             border-radius: 5px;
         }
         .btn-primary:hover {
-            background-color: #0056b3;
+            background-color: #a3d9a5;
         }
     </style>
 </head>
