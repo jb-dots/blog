@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog System</title>
+    <title>Faceblog Homepage</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .navbar {
-            background-color: #a3d9a5;
+            background-color: #1e1e1e; /* Dark background for navbar */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
         }
         .navbar-brand {
             font-weight: bold;
             font-size: 1.5rem;
+            color: #ffffff !important; /* White text for brand */
         }
         .navbar-nav .nav-link {
             color: rgba(255, 255, 255, 0.8); /* Light text color */
@@ -33,7 +34,7 @@
             <div class="navbar-nav">
                 <a class="nav-link" href="index.php">Home</a>
                 <?php if (isset($_SESSION['user_id'])): ?>
-                    <a class="nav-link" href="profile.php">Profile</a> <!-- Changed to Profile -->
+                    <a class="nav-link" href="profile.php">Profile</a>
                     <a class="nav-link" href="logout.php">Logout</a>
                 <?php else: ?>
                     <a class="nav-link" href="register.php">Register</a>

@@ -22,36 +22,49 @@ $posts = $stmt->fetchAll();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa; /* Light gray background */
+            background-color: #121212; /* Dark background */
+            color: #ffffff; /* White text */
         }
         .card {
-            border: none;
+            background-color: #1e1e1e; /* Dark card background */
+            border: 1px solid #333; /* Dark border */
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to cards */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .card:hover {
             transform: translateY(-5px); /* Lift card on hover */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
         }
         .card-title {
-            font-size: 1.5rem;
-            font-weight: bold;
+            color: #ffffff; /* White text for titles */
         }
         .card-text {
-            color: #555;
+            color: #cccccc; /* Light gray text for content */
         }
         .text-muted {
-            font-size: 0.9rem;
+            color: #888 !important; /* Muted text color */
         }
         .btn-primary {
-            background-color: #a3d9a5;
+            background-color: #007bff;
             border: none;
             padding: 8px 16px;
             border-radius: 5px;
         }
         .btn-primary:hover {
-            background-color: #a3d9a5;
+            background-color: #0056b3;
+        }
+        .btn-warning {
+            background-color: #ffc107;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+        .btn-danger {
+            background-color: #dc3545;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
         }
     </style>
 </head>
