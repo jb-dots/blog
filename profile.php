@@ -8,11 +8,19 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-// Fetch the logged-in user's posts
+// Fetch the logged-in user's details
 $user_id = $_SESSION['user_id'];
+$stmt = $conn->prepare("SELECT * FROM users WHERE id = ?");
+$stmt->execute([$user_id]);
+$user = $stmt->fetch();
+
+// Fetch the logged-in user's posts
 $stmt = $conn->prepare("SELECT * FROM posts WHERE user_id = ? ORDER BY created_at DESC");
 $stmt->execute([$user_id]);
 $posts = $stmt->fetchAll();
+
+// Set profile picture based on gender
+$profile_picture = ($user['gender'] == 'male') ? 'default_profile2.png' : 'default_profile.png';
 ?>
 
 <!DOCTYPE html>
@@ -59,9 +67,9 @@ $posts = $stmt->fetchAll();
     <?php include 'includes/header.php'; ?>
     <div class="container my-5">
         <div class="text-center">
-            <!-- Default Profile Picture -->
-            <img src="images/default_profile.png" alt="Profile Picture" class="profile-picture">
-            <h1 class="mb-4"><?= htmlspecialchars($_SESSION['username']); ?>'s Profile</h1>
+            <!-- Profile Picture Based on Gender -->
+            <img src="images/<?= $profile_picture; ?>" alt="Profile Picture" class="profile-picture">
+            <h1 class="mb-4"><?= htmlspecialchars($user['username']); ?>'s Profile</h1>
         </div>
 
         <h2 class="text-center mb-4">Your Posts</h2>
