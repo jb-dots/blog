@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Faceblog Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -62,8 +62,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             text-align: center;
         }
         .logo {
-            width: 100px; /* Adjust the size of the logo */
-            margin-bottom: 20px; /* Space below the logo */
+            width: 200px; /* Adjust the size of the logo */
+            margin-bottom: -20px; /* Space below the logo */
+            margin-top: -35px;
+            margin-left: 80px;
         }
     </style>
 </head>
