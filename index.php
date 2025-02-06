@@ -18,57 +18,13 @@ $posts = $stmt->fetchAll();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faceblog Homepage</title>
+    <title>Homepage</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            background-color: #121212; /* Dark background */
-            color: #ffffff; /* White text */
-        }
-        .card {
-            background-color: #1e1e1e; /* Dark card background */
-            border: 1px solid #333; /* Dark border */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px); /* Lift card on hover */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
-        }
-        .card-title {
-            color: #ffffff; /* White text for titles */
-        }
-        .card-text {
-            color: #cccccc; /* Light gray text for content */
-        }
-        .text-muted {
-            color: #888 !important; /* Muted text color */
-        }
-        .btn-primary {
-            background-color: #007bff;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 5px;
-        }
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-        .btn-warning {
-            background-color: #ffc107;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 5px;
-        }
-        .btn-danger {
-            background-color: #dc3545;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 5px;
-        }
+        /* Dark theme styles (already included in header.php) */
     </style>
 </head>
-<body>
+<body class="dark-theme"> <!-- Default to dark theme -->
     <?php include 'includes/header.php'; ?>
     <div class="container my-5">
         <h1 class="text-center mb-4">Welcome, <?= htmlspecialchars($_SESSION['username']); ?>!</h1>

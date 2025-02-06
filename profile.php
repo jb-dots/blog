@@ -69,7 +69,7 @@ $profile_picture = ($user['gender'] == 'male') ? 'default_profile2.png' : 'defau
         <div class="text-center">
             <!-- Profile Picture Based on Gender -->
             <img src="images/<?= $profile_picture; ?>" alt="Profile Picture" class="profile-picture">
-            <h1 class="mb-4"><?= htmlspecialchars($user['username']); ?>'s Profile</h1>
+            <h1 class="mb-4"><?= htmlspecialchars($user['username']); ?></h1>
         </div>
 
         <h2 class="text-center mb-4">Your Posts</h2>

@@ -62,10 +62,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             text-align: center;
         }
         .logo {
-            width: 200px; /* Adjust the size of the logo */
-            margin-bottom: -20px; /* Space below the logo */
-            margin-top: -35px;
-            margin-left: 80px;
+            width: 100px; /* Adjust the size of the logo */
+            margin-bottom: 10px; /* Space below the logo */
         }
     </style>
 </head>
