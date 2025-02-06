@@ -47,12 +47,17 @@
             color: #6c757d !important;
         }
         .light-theme .navbar {
-            background-color: #588b76;
+            background-color: #d0ded8;
         }
         .light-theme .navbar-brand,
         .light-theme .nav-link {
             color: #000000 !important;
         }
+        
+        .navbar-brand img {
+        background: transparent !important; /* Force transparent background */
+        mix-blend-mode: multiply; /* Blend the image with the background */
+    }
     </style>
 </head>
 <body class="dark-theme"> <!-- Default to dark theme -->

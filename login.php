@@ -64,6 +64,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         .logo {
             width: 100px; /* Adjust the size of the logo */
             margin-bottom: 10px; /* Space below the logo */
+            margin-left: 130px;
+            background: transparent !important; /* Force transparent background */
+            mix-blend-mode: multiply; /* Blend the image with the background */
         }
     </style>
 </head>
